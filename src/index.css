@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --surface: rgba(255, 255, 255, 0.84);
+  --surface-strong: rgba(255, 255, 255, 0.94);
+  --border-soft: rgba(18, 48, 71, 0.08);
+}
+
+html {
+  font-family: "Aptos", Manrope, ui-sans-serif, system-ui, sans-serif;
+  background: #f4f8fa;
+}
+
+body {
+  min-height: 100vh;
+  color: #123047;
+  background:
+    radial-gradient(circle at top right, rgba(42, 143, 132, 0.16), transparent 30%),
+    radial-gradient(circle at bottom left, rgba(230, 126, 77, 0.14), transparent 24%),
+    linear-gradient(180deg, #f8fbfc 0%, #eef4f7 100%);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+::selection {
+  background: rgba(42, 143, 132, 0.2);
+}
+
+.glass-panel {
+  background: var(--surface);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--border-soft);
+}
+
+.soft-card {
+  background: var(--surface-strong);
+  border: 1px solid var(--border-soft);
+  box-shadow: 0 20px 60px rgba(18, 48, 71, 0.08);
+}
+
+.focus-ring {
+  @apply focus:outline-none focus:ring-2 focus:ring-tide focus:ring-offset-2 focus:ring-offset-white;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
